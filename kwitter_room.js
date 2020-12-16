@@ -1,20 +1,19 @@
 var firebaseConfig = {
-      var firebaseConfig = {
-            apiKey: "AIzaSyDD_8680-6x8uzohwbYAIWzfN87nhdN-wY",
-            authDomain: "kwitter-43cd6.firebaseapp.com",
-            databaseURL: "https://kwitter-43cd6-default-rtdb.firebaseio.com",
-            projectId: "kwitter-43cd6",
-            storageBucket: "kwitter-43cd6.appspot.com",
-            messagingSenderId: "697889217112",
-            appId: "1:697889217112:web:1d95832730d069040c482d"
-          };
-
+      apiKey: "AIzaSyCsX9VNwoVfzL9--2O-G3b91r2HLRZsytg",
+      authDomain: "kwitter-homework-afec9.firebaseapp.com",
+      databaseURL: "https://kwitter-homework-afec9-default-rtdb.firebaseio.com",
+      projectId: "kwitter-homework-afec9",
+      storageBucket: "kwitter-homework-afec9.appspot.com",
+      messagingSenderId: "434820575869",
+      appId: "1:434820575869:web:81ccc83c2be666960bf714"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
 //ADD YOUR FIREBASE LINKS HERE
 
-user_name = localStorage.getItem("user_name");
-document.getElementById("user_name").innerHTML = "Welcome " + user_name + "!";
-
-function addRoom() {
+ user_name = localStorage.getItem("user_name");
+ document.getElementById("user_name").innerHTML = "Welcome " + user_name + " ! ";
+ function addRoom(){
       room_name = document.getElementById("room_name").value;
 
       firebase.database().ref("/").child(room_name).update({
